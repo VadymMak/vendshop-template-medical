@@ -18,6 +18,7 @@ export const UI_TRANSLATIONS: Record<SiteLanguage, {
   faq: { title: string };
   portfolio: { title: string; subtitle: string; openImage: string; imageAlt: string };
   whatsapp: { label: string };
+  cookie: { message: string; accept: string; reject: string; learnMore: string; settings: string };
 }> = {
   sk: {
     nav: { home: 'Domov', services: 'Služby', pricing: 'Cenník', gallery: 'Galéria', reviews: 'Recenzie', contact: 'Kontakt', book: 'Objednať', menu: 'Menu' },
@@ -37,6 +38,13 @@ export const UI_TRANSLATIONS: Record<SiteLanguage, {
     faq: { title: 'Časté otázky' },
     portfolio: { title: 'Naše práce', subtitle: 'Výber z našich realizovaných projektov.', openImage: 'Otvoriť obrázok', imageAlt: 'Obrázok z portfólia' },
     whatsapp: { label: 'Kontaktovať cez WhatsApp' },
+    cookie: {
+      message: 'Používame cookies na zlepšenie vašich skúseností. Pokračovaním v prehliadaní súhlasíte s našou cookie politikou.',
+      accept: 'Prijať všetky',
+      reject: 'Odmietnuť',
+      learnMore: 'Viac informácií',
+      settings: 'Nastavenia cookies',
+    },
   },
   ru: {
     nav: { home: 'Главная', services: 'Услуги', pricing: 'Цены', gallery: 'Галерея', reviews: 'Отзывы', contact: 'Контакт', book: 'Записаться', menu: 'Меню' },
@@ -56,6 +64,13 @@ export const UI_TRANSLATIONS: Record<SiteLanguage, {
     faq: { title: 'Частые вопросы' },
     portfolio: { title: 'Наши работы', subtitle: 'Подборка наших реализованных проектов.', openImage: 'Открыть изображение', imageAlt: 'Изображение портфолио' },
     whatsapp: { label: 'Связаться через WhatsApp' },
+    cookie: {
+      message: 'Мы используем cookies для улучшения вашего опыта. Продолжая просматривать сайт, вы соглашаетесь с нашей политикой.',
+      accept: 'Принять все',
+      reject: 'Отклонить',
+      learnMore: 'Узнать больше',
+      settings: 'Настройки cookie',
+    },
   },
   en: {
     nav: { home: 'Home', services: 'Services', pricing: 'Pricing', gallery: 'Gallery', reviews: 'Reviews', contact: 'Contact', book: 'Book Now', menu: 'Menu' },
@@ -75,6 +90,13 @@ export const UI_TRANSLATIONS: Record<SiteLanguage, {
     faq: { title: 'FAQ' },
     portfolio: { title: 'Our work', subtitle: 'A selection of our completed projects.', openImage: 'Open image', imageAlt: 'Portfolio image' },
     whatsapp: { label: 'Contact via WhatsApp' },
+    cookie: {
+      message: 'We use cookies to improve your experience. By continuing to browse, you agree to our cookie policy.',
+      accept: 'Accept All',
+      reject: 'Reject',
+      learnMore: 'Learn more',
+      settings: 'Cookie Settings',
+    },
   },
   de: {
     nav: { home: 'Startseite', services: 'Leistungen', pricing: 'Preise', gallery: 'Galerie', reviews: 'Bewertungen', contact: 'Kontakt', book: 'Termin buchen', menu: 'Menü' },
@@ -94,6 +116,13 @@ export const UI_TRANSLATIONS: Record<SiteLanguage, {
     faq: { title: 'Häufige Fragen' },
     portfolio: { title: 'Unsere Arbeiten', subtitle: 'Eine Auswahl unserer abgeschlossenen Projekte.', openImage: 'Bild öffnen', imageAlt: 'Portfolio-Bild' },
     whatsapp: { label: 'Über WhatsApp kontaktieren' },
+    cookie: {
+      message: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch das Surfen stimmen Sie unserer Cookie-Richtlinie zu.',
+      accept: 'Alle akzeptieren',
+      reject: 'Ablehnen',
+      learnMore: 'Mehr erfahren',
+      settings: 'Cookie-Einstellungen',
+    },
   },
   cs: {
     nav: { home: 'Domů', services: 'Služby', pricing: 'Ceník', gallery: 'Galerie', reviews: 'Recenze', contact: 'Kontakt', book: 'Objednat', menu: 'Menu' },
@@ -113,6 +142,13 @@ export const UI_TRANSLATIONS: Record<SiteLanguage, {
     faq: { title: 'Časté dotazy' },
     portfolio: { title: 'Naše práce', subtitle: 'Výběr z našich realizovaných projektů.', openImage: 'Otevřít obrázek', imageAlt: 'Obrázek z portfolia' },
     whatsapp: { label: 'Kontaktovat přes WhatsApp' },
+    cookie: {
+      message: 'Používáme cookies ke zlepšení vašich zkušeností. Pokračováním v prohlížení souhlasíte s naší cookie politikou.',
+      accept: 'Přijmout vše',
+      reject: 'Odmítnout',
+      learnMore: 'Více informací',
+      settings: 'Nastavení cookies',
+    },
   },
   uk: {
     nav: { home: 'Головна', services: 'Послуги', pricing: 'Ціни', gallery: 'Галерея', reviews: 'Відгуки', contact: 'Контакти', book: 'Записатися', menu: 'Меню' },
@@ -132,5 +168,12 @@ export const UI_TRANSLATIONS: Record<SiteLanguage, {
     faq: { title: 'Часті питання' },
     portfolio: { title: 'Наші роботи', subtitle: 'Вибір наших реалізованих проектів.', openImage: 'Відкрити зображення', imageAlt: 'Зображення портфоліо' },
     whatsapp: { label: "Зв'язатися через WhatsApp" },
+    cookie: {
+      message: 'Ми використовуємо файли cookie для покращення вашого досвіду. Продовжуючи перегляд, ви погоджуєтесь з нашою політикою.',
+      accept: 'Прийняти всі',
+      reject: 'Відхилити',
+      learnMore: 'Дізнатися більше',
+      settings: 'Налаштування cookie',
+    },
   },
 };
