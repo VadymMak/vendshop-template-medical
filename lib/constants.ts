@@ -13,6 +13,7 @@ import type {
   ImageMap,
   HeroContent,
 } from './types';
+import { t } from './get-ui-text';
 
 // Switch to true when local /images/*.webp files are ready
 export const USE_LOCAL_IMAGES = false;
@@ -32,37 +33,37 @@ export const IMAGES: ImageMap = {
   hero: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80',
   about: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80',
   gallery: [],
-  logo: '';
+  logo: '',
 };
 
 // ---------------------------------------------------------------------------
 // NAVIGATION
 // ---------------------------------------------------------------------------
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Home',     href: '#hero'     },
-  { label: 'Services', href: '#services' },
-  { label: 'Reviews',  href: '#reviews'  },
-  { label: 'Contact',  href: '#contact'  },
+  { label: t().nav.home,     href: '#hero'     },
+  { label: t().nav.services, href: '#services' },
+  { label: t().nav.reviews,  href: '#reviews'  },
+  { label: t().nav.contact,  href: '#contact'  },
 ];
 
 // ---------------------------------------------------------------------------
 // STATS
 // ---------------------------------------------------------------------------
 export const STATS: StatItem[] = [
-  { value: '—', label: 'Years of experience' },
-  { value: '—', label: 'Happy customers'     },
-  { value: '—', label: 'Satisfaction rate'   },
-  { value: '—', label: 'Projects completed'  },
+  { value: '—', label: t().stats.years     },
+  { value: '—', label: t().stats.clients   },
+  { value: '—', label: t().stats.rating    },
+  { value: '—', label: t().stats.guarantee },
 ];
 
 // ---------------------------------------------------------------------------
 // WHY US
 // ---------------------------------------------------------------------------
 export const WHY_ITEMS: WhyItem[] = [
-  { id: '1', icon: '⭐', title: 'Quality',      description: 'We deliver high-quality results every time.' },
-  { id: '2', icon: '⚡', title: 'Fast',         description: 'Quick turnaround without compromising quality.' },
-  { id: '3', icon: '💰', title: 'Fair pricing', description: 'Transparent pricing with no hidden fees.' },
-  { id: '4', icon: '🛡️', title: 'Guaranteed',  description: 'We stand behind every job we do.' },
+  { id: '1', icon: '⭐', title: t().whyUs.q1Title, description: t().whyUs.q1Desc },
+  { id: '2', icon: '⚡', title: t().whyUs.q2Title, description: t().whyUs.q2Desc },
+  { id: '3', icon: '💰', title: t().whyUs.q3Title, description: t().whyUs.q3Desc },
+  { id: '4', icon: '🛡️', title: t().whyUs.q4Title, description: t().whyUs.q4Desc },
 ];
 
 // ---------------------------------------------------------------------------
@@ -89,10 +90,10 @@ export const REVIEWS: Review[] = [];
 // CONTACT
 // ---------------------------------------------------------------------------
 export const CONTACT_ITEMS: ContactItem[] = [
-  { icon: '📍', title: 'Address',      lines: [''] },
-  { icon: '📞', title: 'Phone',        lines: [''] },
-  { icon: '✉️', title: 'Email',        lines: [''] },
-  { icon: '🕐', title: 'Working hours', lines: [''] },
+  { icon: '📍', title: t().contact.address, lines: [''] },
+  { icon: '📞', title: t().contact.phone,   lines: [''] },
+  { icon: '✉️', title: t().contact.email,   lines: [''] },
+  { icon: '🕐', title: t().contact.hours,   lines: [''] },
 ];
 
 // ---------------------------------------------------------------------------
@@ -104,12 +105,12 @@ export const FAQ_ITEMS: FaqItem[] = [];
 // CHAT CONFIG
 // ---------------------------------------------------------------------------
 export const CHAT_CONFIG: ChatConfig = {
-  greeting: 'Hello! How can I help you?',
+  greeting: t().chat.greeting,
   quickReplies: [
-    { id: '1', label: '📋 Services',       response: 'Please contact us for a full list of services.' },
-    { id: '2', label: '🕐 Working hours',  response: 'Please check our contact section for working hours.' },
-    { id: '3', label: '📍 Location',       response: 'Please check our contact section for the address.' },
-    { id: '4', label: '📅 Booking',        response: 'You can book via the form on this page or call us directly.' },
+    { id: '1', label: t().chat.qr1Label, response: t().chat.qr1Reply },
+    { id: '2', label: t().chat.qr2Label, response: t().chat.qr2Reply },
+    { id: '3', label: t().chat.qr3Label, response: t().chat.qr3Reply },
+    { id: '4', label: t().chat.qr4Label, response: t().chat.qr4Reply },
   ],
-  fallbackResponse: 'Thanks for your message! We will get back to you shortly.',
+  fallbackResponse: t().chat.fallback,
 };

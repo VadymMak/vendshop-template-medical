@@ -5,85 +5,80 @@
   right: 0;
   z-index: 9999;
   background: rgba(0, 0, 0, 0.92);
-  border-top: 1px solid var(--border);
-  animation: slideUp 0.35s ease;
+  border-top: 1px solid var(--border, rgba(255,255,255,0.12));
   padding: 1rem 1.5rem;
+  animation: slideUp 0.3s ease-out;
 }
 
-.content {
+.inner {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
 
 .message {
-  flex: 1;
+  color: rgba(255, 255, 255, 0.88);
   font-size: 0.875rem;
-  color: #ccc;
+  line-height: 1.5;
   margin: 0;
+  flex: 1;
   min-width: 200px;
+}
+
+.link {
+  color: var(--primary, #4ade80);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .actions {
   display: flex;
-  align-items: center;
   gap: 0.75rem;
-  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.reject {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: transparent;
+  color: rgba(255,255,255,0.88);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.reject:hover {
+  border-color: rgba(255,255,255,0.6);
 }
 
 .accept {
-  background: var(--primary);
-  color: #fff;
-  border: none;
   padding: 0.5rem 1.25rem;
-  border-radius: 4px;
+  background: var(--primary, #4ade80);
+  color: var(--primary-fg, #000);
+  border: none;
+  border-radius: 6px;
   font-size: 0.875rem;
+  font-weight: 600;
   cursor: pointer;
   transition: opacity 0.2s;
 }
 
 .accept:hover {
-  opacity: 0.85;
-}
-
-.reject {
-  background: transparent;
-  color: #ccc;
-  border: 1px solid var(--border);
-  padding: 0.5rem 1.25rem;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.reject:hover {
-  opacity: 0.7;
-}
-
-.learnMore {
-  font-size: 0.8rem;
-  color: var(--primary);
-  text-decoration: underline;
-  white-space: nowrap;
+  opacity: 0.9;
 }
 
 @keyframes slideUp {
-  from { transform: translateY(100%); }
-  to { transform: translateY(0); }
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
 }
 
 @media (max-width: 640px) {
-  .content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .actions {
-    width: 100%;
-  }
+  .inner { flex-direction: column; align-items: stretch; }
+  .actions { flex-direction: column; }
+  .reject, .accept { width: 100%; text-align: center; padding: 0.75rem; }
 }
